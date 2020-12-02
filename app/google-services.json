@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "109991029060",
+    "firebase_url": "https://location-reminders-2ee1c.firebaseio.com",
+    "project_id": "location-reminders-2ee1c",
+    "storage_bucket": "location-reminders-2ee1c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:109991029060:android:68f892f7759bea841a4f11",
+        "android_client_info": {
+          "package_name": "com.bobabelga.locationreminders"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "109991029060-bbi8i3n5l9e3mgv0s39fuftbpvtp8l3k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJQDaT05242BVBuwD3A3dTvWOSeddub5E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "109991029060-bbi8i3n5l9e3mgv0s39fuftbpvtp8l3k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
