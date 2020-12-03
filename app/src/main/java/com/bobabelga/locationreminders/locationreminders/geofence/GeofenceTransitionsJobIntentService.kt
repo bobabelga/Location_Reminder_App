@@ -17,11 +17,12 @@ import kotlin.coroutines.CoroutineContext
 
 class GeofenceTransitionsJobIntentService : JobIntentService(), CoroutineScope {
 
-
+    val remindersLocalRepository: RemindersLocalRepository by inject()
     private val TAG = "GeofenceTransitionsJobIntentService"
     private var coroutineJob: Job = Job()
     override val coroutineContext: CoroutineContext
         get() = Dispatchers.IO + coroutineJob
+
 
 
     companion object {
@@ -72,7 +73,6 @@ class GeofenceTransitionsJobIntentService : JobIntentService(), CoroutineScope {
 
         if(requestId.isNullOrEmpty()) return
         //Get the local repository instance
-        val remindersLocalRepository: RemindersLocalRepository by inject()
 //        Interaction to the repository has to be through a coroutine scope
         CoroutineScope(coroutineContext).launch(SupervisorJob()) {
             //get the reminder with the request id
