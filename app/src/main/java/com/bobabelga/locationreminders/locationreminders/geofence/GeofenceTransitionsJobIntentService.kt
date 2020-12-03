@@ -4,9 +4,9 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 import androidx.core.app.JobIntentService
+import com.bobabelga.locationreminders.locationreminders.data.ReminderDataSource
 import com.bobabelga.locationreminders.locationreminders.data.dto.ReminderDTO
 import com.bobabelga.locationreminders.locationreminders.data.dto.Result
-import com.bobabelga.locationreminders.locationreminders.data.local.RemindersLocalRepository
 import com.bobabelga.locationreminders.locationreminders.reminderslist.ReminderDataItem
 import com.bobabelga.locationreminders.utils.sendNotification
 import com.google.android.gms.location.Geofence
@@ -17,7 +17,7 @@ import kotlin.coroutines.CoroutineContext
 
 class GeofenceTransitionsJobIntentService : JobIntentService(), CoroutineScope {
 
-    val remindersLocalRepository: RemindersLocalRepository by inject()
+    val remindersLocalRepository: ReminderDataSource by inject()
     private val TAG = "GeofenceTransitionsJobIntentService"
     private var coroutineJob: Job = Job()
     override val coroutineContext: CoroutineContext
